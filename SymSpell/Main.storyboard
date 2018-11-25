@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XHY-VZ-Z29">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uiw-br-9e2">
+            <objects>
+                <viewController id="XHY-VZ-Z29" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pZe-pz-e13">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-3g-cl6">
+                                <rect key="frame" x="20" y="75" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XHY-VZ-Z29" id="Va5-mR-M4z"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-WL-00R">
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XHY-VZ-Z29" id="OL4-Rr-ZnL"/>
+                                    <outlet property="delegate" destination="XHY-VZ-Z29" id="VXW-BM-uH6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Y2-WL-00R" firstAttribute="leading" secondItem="n5M-9U-W1n" secondAttribute="leading" id="3bL-96-knz"/>
+                            <constraint firstItem="cPa-3g-cl6" firstAttribute="top" secondItem="n5M-9U-W1n" secondAttribute="top" constant="55" id="6ep-JE-AX8"/>
+                            <constraint firstItem="cPa-3g-cl6" firstAttribute="leading" secondItem="n5M-9U-W1n" secondAttribute="leading" constant="20" id="7LC-R5-5ar"/>
+                            <constraint firstItem="5Y2-WL-00R" firstAttribute="bottom" secondItem="n5M-9U-W1n" secondAttribute="bottom" id="A1F-NX-oGC"/>
+                            <constraint firstItem="5Y2-WL-00R" firstAttribute="bottom" secondItem="n5M-9U-W1n" secondAttribute="bottom" id="GJB-7d-3za"/>
+                            <constraint firstItem="5Y2-WL-00R" firstAttribute="trailing" secondItem="n5M-9U-W1n" secondAttribute="trailing" id="SXG-TX-RZc"/>
+                            <constraint firstItem="n5M-9U-W1n" firstAttribute="trailing" secondItem="cPa-3g-cl6" secondAttribute="trailing" constant="20" id="uCW-JN-0nx"/>
+                            <constraint firstItem="5Y2-WL-00R" firstAttribute="top" secondItem="cPa-3g-cl6" secondAttribute="bottom" constant="20" id="uZQ-Kw-RJG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n5M-9U-W1n"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblWords" destination="5Y2-WL-00R" id="WoJ-jK-8g8"/>
+                        <outlet property="txtWord" destination="cPa-3g-cl6" id="aNg-WG-X7z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCN-s3-lBp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="161"/>
+        </scene>
+    </scenes>
+</document>
