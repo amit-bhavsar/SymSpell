@@ -1,6 +1,6 @@
 # SymSpell
 
-A Objective-C port of [SymSpell v6.3](https://github.com/wolfgarbe/SymSpell).  
+Objective-C port of [SymSpell v6.3](https://github.com/wolfgarbe/SymSpell).  
 Realm database is used for speed and memory efficiency.  
 
 # Usage
