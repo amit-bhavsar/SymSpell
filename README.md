@@ -15,3 +15,11 @@ TapAutoCorrect *ac = [[TapAutoCorrect alloc]init];
 _arrSuggestion = [ac lookupRealmForWord:_txtWord.text maxEditDistance:2 verbosity:2 includeUnknown:YES];
 
 ```
+
+
+## To do
+
+Distance logic need tobe changed to use SymSpell in keyboards.  
+"qgsy" should be autocorrected with "what"
+
+You are welcomed to give your ideas/suggestions/improvements to make this port more better.
